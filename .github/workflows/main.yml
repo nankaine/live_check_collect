@@ -2,7 +2,7 @@ name: test # 名称随意
 on: 
   schedule: 
   - cron: '0 */2 * * *'
-  # workflow_dispatch: 
+  workflow_dispatch: 
   # watch: 
    # types: started 
   # repository_dispatch:

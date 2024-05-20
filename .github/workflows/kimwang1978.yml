@@ -1,5 +1,5 @@
 # kimwang1978/collect-tv-txt
-name: kimwang1978/collect-tv-txt # 名称随意
+name: kimwang1978-collect-tv-txt # 名称随意
 on: 
   schedule: 
   - cron: '*/34 */1 * * *'

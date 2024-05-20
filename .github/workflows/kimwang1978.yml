@@ -1,0 +1,29 @@
+# kimwang1978/collect-tv-txt
+name: kimwang1978/collect-tv-txt # 名称随意
+on: 
+  schedule: 
+  - cron: '*/34 */1 * * *'
+  workflow_dispatch: 
+  # watch: 
+   # types: started 
+  # repository_dispatch:
+    # types: ark
+jobs: 
+ repo-sync: 
+     env: 
+       PAT: ${{ secrets.PAT }} 
+     runs-on: ubuntu-latest 
+     if: github.event.repository.owner.id == github.event.sender.id 
+     steps: 
+      - uses: actions/checkout@v2 
+        with: 
+          persist-credentials: false 
+    
+      - name: sync kimwang1978/collect-tv-txt
+        uses: repo-sync/github-sync@v2 
+        if: env.PAT 
+        with: 
+          source_repo: "https://github.com/kimwang1978/collect-tv-txt.git" # 上游仓库地址
+          source_branch: "main" 
+          destination_branch: "kimwang1978-collect-tv-txt" # 按照自己仓库分支名称修改
+          github_token: ${{ secrets.PAT }} 

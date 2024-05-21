@@ -3,7 +3,7 @@ name: kimwang1978-collect-tv-txt # 名称随意
 on: 
   workflow_dispatch: 
   schedule: 
-  - cron: '*/5 * * * *'
+  - cron: '34 */2 * * *'
   # watch: 
    # types: started 
   # repository_dispatch:

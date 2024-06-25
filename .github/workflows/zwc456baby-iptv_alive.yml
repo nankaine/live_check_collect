@@ -2,7 +2,7 @@ name: zwc456baby-iptv_alive # 名称随意
 on: 
   workflow_dispatch: 
   schedule: 
-  - cron: '45 */2 * * *'
+  - cron: '45 */8 * * *'
   # watch: 
    # types: started 
   # repository_dispatch:
